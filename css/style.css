@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway";
+}
+
+/* Kontener służy wyłącznie do konstrukcji, więc się go nie stylizuje */
+.container {
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto; /* wysrodkowanie kontenera */
+}
+
+.container::before, .container:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.header {
+  background-color: black;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  width: 50%;
+  float: left;
+  padding: 15px 25px;
+}
+
+.header h1 span {
+  color: #27c7ab;
+}
+
+.header nav {
+  width: 50%;
+  float: right;
+}
+
+.mainMenu {
+  display: inline;
+  list-style-type: none;
+  width: 100%;
+}
+
+.mainMenu li {
+  display: inline-block;
+  position: relative;
+}
+
+.mainMenu li a {
+  display: block;
+  color: #ffffff;
+  padding: 15px 25px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-variant: inherit;
+  text-decoration: none;
+}
+
+.subMenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 120%; /* przestrzeni position: relative */
+  background-color: black;
+  z-index: 9;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 28px solid transparent;
+  border-bottom: 28px solid black;
+  top: -40px;
+  left: calc(50% - 28px);
+}
+
+.hasChildren a:focus + .subMenu {
+  display: block;
+}
+
+#slider {
+  min-height: 400px;
+  background: linear-gradient(#fafafa, #d0cfd7);
+  position: relative;
+}
+#slider img {
+  float: left;
+}
+
+#arrowL {
+  display: block;
+  color: #27c7ab;
+  font-size: 7.2rem;
+  font-variant: inherit;
+  text-decoration: none;
+  position: absolute;
+  top: calc(50% - 40px);
+  left: 2rem;
+}
+
+#arrowR {
+
+  color: #27c7ab;
+  font-size: 7.2rem;
+  font-variant: inherit;
+  text-decoration: none;
+  position: absolute;
+  top: calc(50% - 40px);
+  right: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 2rem;
+}
+
+#slider h2 span {
+  color: #27c7ab;
+}
+
+#slider button {
+  font-size: 2rem;
+  display: block;
+  padding: 10px 30px;
+  border: none;
+  color: white;
+  background-color: #27c7ab;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.sliderText p {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
